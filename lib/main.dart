@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/next_screen_one.dart';
+import 'package:gofit/screens/slider_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NextScreenOne(),
+      home: const NewScreeen(),
     );
   }
 }
