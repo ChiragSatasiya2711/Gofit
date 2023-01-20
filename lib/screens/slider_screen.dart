@@ -13,17 +13,17 @@ class _NewScreeenState extends State<NewScreeen> {
 
   List sliderList = [
     {
-      "image": "assets/images/Background.png",
+      "image": "assets/images/new_image_3.png",
       "title": "MEET YOUR COACH",
       "subtitle": "START YOUR JOURNEY",
     },
     {
-      "image": "assets/images/Backgroundb.png",
+      "image": "assets/images/new_image_4.png",
       "title": "CREATE A WORKOUT PLAN",
       "subtitle": "to stay fit",
     },
     {
-      "image": "assets/images/Backgrounda.png",
+      "image": "assets/images/new_image_5.png",
       "title": "ACTION IS THE",
       "subtitle": "KEY TO ALL SUCCESS",
     },
