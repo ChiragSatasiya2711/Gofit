@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/height_screen.dart';
+import 'package:gofit/screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HeightScreen(),
+      home: const ProfileScreen(),
     );
   }
 }

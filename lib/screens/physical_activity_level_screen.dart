@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HeightScreen extends StatefulWidget {
-  const HeightScreen({Key? key}) : super(key: key);
+class PhysicalActivityLevelScreen extends StatefulWidget {
+  const PhysicalActivityLevelScreen({Key? key}) : super(key: key);
 
   @override
-  State<HeightScreen> createState() => _HeightScreenState();
+  State<PhysicalActivityLevelScreen> createState() => _PhysicalActivityLevelScreenState();
 }
 
-class _HeightScreenState extends State<HeightScreen> {
+class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,14 +22,14 @@ class _HeightScreenState extends State<HeightScreen> {
           child: Column(
             children: [
               Text(
-                "What is Your Height?",
+                "Physical Activity Level?",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
                 height: height / 40,
               ),
               Text(
-                "Height in cm.Don’t worry,you can always \nchange it later.",
+                "Choose your regular activity level.This will \nhelp us to personalize plans for you.",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),

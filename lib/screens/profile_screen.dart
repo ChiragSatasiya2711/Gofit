@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HeightScreen extends StatefulWidget {
-  const HeightScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<HeightScreen> createState() => _HeightScreenState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _HeightScreenState extends State<HeightScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,14 +22,14 @@ class _HeightScreenState extends State<HeightScreen> {
           child: Column(
             children: [
               Text(
-                "What is Your Height?",
+                "Fill Your Profile",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
                 height: height / 40,
               ),
               Text(
-                "Height in cm.Don’t worry,you can always \nchange it later.",
+                "Don’t worry.you can always chenge it later.or \nyou can skip it skip for now.",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),
