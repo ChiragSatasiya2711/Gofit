@@ -50,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        "Back",
+                        "Skip",
                         style: TextStyle(
                           color: Color(0xFF6842FF),
                         ),
@@ -71,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        "Continue",
+                        "Start",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
