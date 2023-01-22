@@ -50,10 +50,15 @@ class _WeightScreenState extends State<WeightScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Back",
-                        style: TextStyle(
-                          color: Color(0xFF6842FF),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          "Back",
+                          style: TextStyle(
+                            color: Color(0xFF6842FF),
+                          ),
                         ),
                       ),
                     ),

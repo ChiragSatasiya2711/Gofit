@@ -52,10 +52,15 @@ class _OldScreenState extends State<OldScreen> {
                     child: Center(
                       child: TextButton(
                         onPressed: () {},
-                        child: Text(
-                          "Back",
-                          style: TextStyle(
-                            color: Color(0xFF6842FF),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            "Back",
+                            style: TextStyle(
+                              color: Color(0xFF6842FF),
+                            ),
                           ),
                         ),
                       ),
