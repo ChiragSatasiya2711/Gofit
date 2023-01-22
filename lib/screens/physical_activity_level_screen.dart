@@ -19,11 +19,12 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "Physical Activity Level?",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -32,7 +33,7 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               Text(
                 "Choose your regular activity level.This will \nhelp us to personalize plans for you.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
               SizedBox(
                 height: height / 1.5,
@@ -62,9 +63,6 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width / 30,
                   ),
                   Container(
                     height: height / 20,

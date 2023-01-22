@@ -21,11 +21,12 @@ class _ContinueScreenState extends State<ContinueScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 30),
           child: Column(
             children: [
               Text(
                 "Tell Us About Yourself",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -34,7 +35,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               Text(
                 "To give you a better experience and results \nwe need to know your gender.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
               ),
               SizedBox(
                 height: height / 10,

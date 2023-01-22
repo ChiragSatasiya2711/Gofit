@@ -19,11 +19,12 @@ class _HeightScreenState extends State<HeightScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "What is Your Height?",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -62,9 +63,6 @@ class _HeightScreenState extends State<HeightScreen> {
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width / 30,
                   ),
                   Container(
                     height: height / 20,

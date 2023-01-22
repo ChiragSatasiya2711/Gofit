@@ -19,11 +19,12 @@ class _GoalScreenState extends State<GoalScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "What is your Goal?",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -32,7 +33,7 @@ class _GoalScreenState extends State<GoalScreen> {
               Text(
                 "You can choose mare than one.Don’t worry. \nyou can always change it later.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
               SizedBox(
                 height: height / 1.5,
@@ -62,9 +63,6 @@ class _GoalScreenState extends State<GoalScreen> {
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width / 30,
                   ),
                   Container(
                     height: height / 20,

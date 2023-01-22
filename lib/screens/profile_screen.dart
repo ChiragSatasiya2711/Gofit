@@ -18,11 +18,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "Fill Your Profile",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -31,7 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Text(
                 "Don’t worry.you can always chenge it later.or \nyou can skip it skip for now.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: height / 55, fontWeight: FontWeight.w400),
               ),
               SizedBox(
                 height: height / 1.5,
@@ -56,9 +57,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width / 30,
                   ),
                   Container(
                     height: height / 20,
