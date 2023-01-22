@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/goal_screen.dart';
 
 class HeightScreen extends StatefulWidget {
   const HeightScreen({Key? key}) : super(key: key);
@@ -70,9 +71,19 @@ class _HeightScreenState extends State<HeightScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(color: Colors.white),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => GoalScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

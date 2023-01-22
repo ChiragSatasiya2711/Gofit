@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/old_screen.dart';
 
 class ContinueScreen extends StatefulWidget {
   const ContinueScreen({Key? key}) : super(key: key);
@@ -8,6 +9,8 @@ class ContinueScreen extends StatefulWidget {
 }
 
 class _ContinueScreenState extends State<ContinueScreen> {
+  Color color = Colors.grey;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -36,13 +39,17 @@ class _ContinueScreenState extends State<ContinueScreen> {
               SizedBox(
                 height: height / 10,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  return;
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    color = Color(0xFF6842FF);
+                  });
                 },
-                onFocusChange: (value) {},
-                onLongPress: () {},
-                style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                onDoubleTap: () {
+                  setState(() {
+                    color = Colors.grey;
+                  });
+                },
                 child: Container(
                   height: height / 4.2,
                   width: width / 2,
@@ -50,7 +57,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(200),
                     ),
-                    color: Color(0xFFBDBDBD),
+                    color: color,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -70,13 +77,17 @@ class _ContinueScreenState extends State<ContinueScreen> {
               SizedBox(
                 height: height / 30,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  return;
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    color = Color(0xFF6842FF);
+                  });
                 },
-                onFocusChange: (value) {},
-                onLongPress: () {},
-                style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                onDoubleTap: () {
+                  setState(() {
+                    color = Colors.grey;
+                  });
+                },
                 child: Container(
                   height: height / 4.2,
                   width: width / 2,
@@ -84,7 +95,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(200),
                     ),
-                    color: Color(0xFF6842FF),
+                    color: color,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -114,9 +125,19 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   ),
                 ),
                 child: Center(
-                  child: Text(
-                    "Continue",
-                    style: TextStyle(color: Colors.white, fontSize: height / 50),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => OldScreen(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Continue",
+                      style: TextStyle(color: Colors.white, fontSize: height / 50),
+                    ),
                   ),
                 ),
               ),

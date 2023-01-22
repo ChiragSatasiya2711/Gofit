@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/weight_screen.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -49,10 +50,13 @@ class _OldScreenState extends State<OldScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Back",
-                        style: TextStyle(
-                          color: Color(0xFF6842FF),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Back",
+                          style: TextStyle(
+                            color: Color(0xFF6842FF),
+                          ),
                         ),
                       ),
                     ),
@@ -70,9 +74,19 @@ class _OldScreenState extends State<OldScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(color: Colors.white),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WeightScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

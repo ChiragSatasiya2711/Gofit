@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/height_screen.dart';
 
 class WeightScreen extends StatefulWidget {
   const WeightScreen({Key? key}) : super(key: key);
@@ -70,9 +71,19 @@ class _WeightScreenState extends State<WeightScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(color: Colors.white),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HeightScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

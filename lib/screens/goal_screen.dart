@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/physical_activity_level_screen.dart';
 
 class GoalScreen extends StatefulWidget {
   const GoalScreen({Key? key}) : super(key: key);
@@ -70,9 +71,19 @@ class _GoalScreenState extends State<GoalScreen> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(color: Colors.white),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PhysicalActivityLevelScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
