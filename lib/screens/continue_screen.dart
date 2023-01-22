@@ -43,7 +43,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    color = Color(0xFF6842FF);
+                    color = const Color(0xFF6842FF);
                   });
                 },
                 onDoubleTap: () {
@@ -55,7 +55,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   height: height / 4.2,
                   width: width / 2,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(200),
                     ),
                     color: color,
@@ -81,7 +81,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    color = Color(0xFF6842FF);
+                    color = const Color(0xFF6842FF);
                   });
                 },
                 onDoubleTap: () {
@@ -93,7 +93,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   height: height / 4.2,
                   width: width / 2,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(200),
                     ),
                     color: color,
@@ -119,7 +119,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               Container(
                 height: height / 20,
                 width: width / 1.3,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFF6842FF),
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
@@ -131,7 +131,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OldScreen(),
+                          builder: (context) => const OldScreen(),
                         ),
                       );
                     },

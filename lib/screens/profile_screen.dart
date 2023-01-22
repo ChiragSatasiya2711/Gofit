@@ -43,13 +43,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Skip",
                         style: TextStyle(
@@ -61,13 +61,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Start",
                         style: TextStyle(color: Colors.white),

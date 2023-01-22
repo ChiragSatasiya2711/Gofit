@@ -44,7 +44,7 @@ class _OldScreenState extends State<OldScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -57,7 +57,7 @@ class _OldScreenState extends State<OldScreen> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text(
+                          child: const Text(
                             "Back",
                             style: TextStyle(
                               color: Color(0xFF6842FF),
@@ -70,7 +70,7 @@ class _OldScreenState extends State<OldScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -82,11 +82,11 @@ class _OldScreenState extends State<OldScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => WeightScreen(),
+                              builder: (context) => const WeightScreen(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Continue",
                           style: TextStyle(color: Colors.white),
                         ),

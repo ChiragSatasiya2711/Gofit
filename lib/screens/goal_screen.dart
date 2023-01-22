@@ -44,7 +44,7 @@ class _GoalScreenState extends State<GoalScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -55,7 +55,7 @@ class _GoalScreenState extends State<GoalScreen> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: Text(
+                        child: const Text(
                           "Back",
                           style: TextStyle(
                             color: Color(0xFF6842FF),
@@ -67,7 +67,7 @@ class _GoalScreenState extends State<GoalScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -79,11 +79,11 @@ class _GoalScreenState extends State<GoalScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PhysicalActivityLevelScreen(),
+                              builder: (context) => const PhysicalActivityLevelScreen(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Continue",
                           style: TextStyle(color: Colors.white),
                         ),
