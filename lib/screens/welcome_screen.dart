@@ -21,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => NewScreeen(),
+            builder: (context) => SliderScreen(),
           ),
         );
       },

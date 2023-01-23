@@ -1,32 +1,29 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class NewScreeen extends StatefulWidget {
-  const NewScreeen({Key? key}) : super(key: key);
+class SliderScreen extends StatefulWidget {
+  const SliderScreen({Key? key}) : super(key: key);
 
   @override
-  State<NewScreeen> createState() => _NewScreeenState();
+  State<SliderScreen> createState() => _SliderScreenState();
 }
 
-class _NewScreeenState extends State<NewScreeen> {
+class _SliderScreenState extends State<SliderScreen> {
   int index = 0;
   CarouselController carouselController = CarouselController();
 
   List sliderList = [
     {
       "image": "assets/images/new_image_3.png",
-      "title": "Find the right",
-      "subtitle": "Workout for what \nyou need",
+      "title": "Find the right\nWorkout for what \nyou need",
     },
     {
       "image": "assets/images/new_image_4.png",
-      "title": "CREATE A WORKOUT PLAN",
-      "subtitle": "to stay fit",
+      "title": "CREATE A WORKOUT PLAN\nto stay fit",
     },
     {
       "image": "assets/images/new_image_5.png",
-      "title": "ACTION IS THE",
-      "subtitle": "KEY TO ALL SUCCESS",
+      "title": "ACTION IS THE\nKEY TO ALL SUCCESS",
     },
   ];
 
@@ -47,7 +44,7 @@ class _NewScreeenState extends State<NewScreeen> {
                   .map(
                     (item) => Container(
                       color: Colors.black,
-                      height: height * .55,
+                      height: height * 1,
                       child: Column(
                         children: [
                           SizedBox(
@@ -63,21 +60,11 @@ class _NewScreeenState extends State<NewScreeen> {
                             text: TextSpan(
                               text: sliderList[index]["title"],
                               style: TextStyle(
-                                fontSize: text * 30,
+                                fontSize: text * 24,
                                 fontFamily: 'IntegralCF',
                               ),
                             ),
                           ),
-                          RichText(
-                            text: TextSpan(
-                              text: sliderList[index]["subtitle"],
-                              style: TextStyle(
-                                fontSize: text * 30,
-                                fontFamily: 'IntegralCF',
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
                         ],
                       ),
                     ),
@@ -85,9 +72,9 @@ class _NewScreeenState extends State<NewScreeen> {
                   .toList(),
               carouselController: carouselController,
               options: CarouselOptions(
-                autoPlay: false,
+                autoPlay: true,
                 enlargeCenterPage: false,
-                height: height * 0.75,
+                height: height * 0.80,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
                   this.index = index;
@@ -109,9 +96,7 @@ class _NewScreeenState extends State<NewScreeen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         //shape: BoxShape.circle,
-                        color: (Colors.white).withOpacity(
-                          index == entry.key ? 0.9 : 0.4,
-                        ),
+                        color: Colors.red,
                       ),
                     ),
                   );
