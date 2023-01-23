@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: height / 40,
               ),
               Text(
-                "Don’t worry.you can always chenge it later.or \nyou can skip it skip for now.",
+                "Don’t worry.you can always change it later.or you can skip it skip for now.",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 55, fontWeight: FontWeight.w400),
               ),
