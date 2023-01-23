@@ -21,11 +21,12 @@ class _ContinueScreenState extends State<ContinueScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 30),
           child: Column(
             children: [
               Text(
                 "Tell Us About Yourself",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -34,7 +35,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               Text(
                 "To give you a better experience and results \nwe need to know your gender.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
               ),
               SizedBox(
                 height: height / 10,
@@ -42,7 +43,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    color = Color(0xFF6842FF);
+                    color = const Color(0xFF6842FF);
                   });
                 },
                 onDoubleTap: () {
@@ -54,7 +55,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   height: height / 4.2,
                   width: width / 2,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(200),
                     ),
                     color: color,
@@ -80,7 +81,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    color = Color(0xFF6842FF);
+                    color = const Color(0xFF6842FF);
                   });
                 },
                 onDoubleTap: () {
@@ -92,7 +93,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   height: height / 4.2,
                   width: width / 2,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(200),
                     ),
                     color: color,
@@ -118,7 +119,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
               Container(
                 height: height / 20,
                 width: width / 1.3,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFF6842FF),
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
@@ -130,7 +131,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OldScreen(),
+                          builder: (context) => const OldScreen(),
                         ),
                       );
                     },

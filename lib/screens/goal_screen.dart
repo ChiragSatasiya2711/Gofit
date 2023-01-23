@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/physical_activity_level_screen.dart';
 
 class GoalScreen extends StatefulWidget {
   const GoalScreen({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class _GoalScreenState extends State<GoalScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -53,7 +54,7 @@ class _GoalScreenState extends State<GoalScreen> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: const Text(
+                        child: Text(
                           "Back",
                           style: TextStyle(
                             color: Color(0xFF6842FF),
@@ -68,16 +69,26 @@ class _GoalScreenState extends State<GoalScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
                     ),
-                    child: const Center(
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(color: Colors.white),
+                    child: Center(
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PhysicalActivityLevelScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

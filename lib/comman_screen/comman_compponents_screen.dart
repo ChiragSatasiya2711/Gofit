@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CommanContainer extends StatelessWidget {
-  const CommanContainer({Key? key}) : super(key: key);
+class CommanCompponentsScreen extends StatelessWidget {
+  const CommanCompponentsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

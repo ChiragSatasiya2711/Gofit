@@ -19,11 +19,12 @@ class _OldScreenState extends State<OldScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "How Old Are You?",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -32,7 +33,7 @@ class _OldScreenState extends State<OldScreen> {
               Text(
                 "Age in years.This will help us to personalize \nan exercise program plan that suits you.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
               SizedBox(
                 height: height / 1.5,
@@ -43,7 +44,7 @@ class _OldScreenState extends State<OldScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -56,7 +57,7 @@ class _OldScreenState extends State<OldScreen> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text(
+                          child: const Text(
                             "Back",
                             style: TextStyle(
                               color: Color(0xFF6842FF),
@@ -66,13 +67,10 @@ class _OldScreenState extends State<OldScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: width / 30,
-                  ),
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -84,11 +82,11 @@ class _OldScreenState extends State<OldScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => WeightScreen(),
+                              builder: (context) => const WeightScreen(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Continue",
                           style: TextStyle(color: Colors.white),
                         ),

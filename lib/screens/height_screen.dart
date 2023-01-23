@@ -19,11 +19,12 @@ class _HeightScreenState extends State<HeightScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
                 "What is Your Height?",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
@@ -43,7 +44,7 @@ class _HeightScreenState extends State<HeightScreen> {
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF0ECFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -54,7 +55,7 @@ class _HeightScreenState extends State<HeightScreen> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: Text(
+                        child: const Text(
                           "Back",
                           style: TextStyle(
                             color: Color(0xFF6842FF),
@@ -63,13 +64,10 @@ class _HeightScreenState extends State<HeightScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: width / 30,
-                  ),
                   Container(
                     height: height / 20,
                     width: width / 2.3,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF6842FF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
@@ -81,11 +79,11 @@ class _HeightScreenState extends State<HeightScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => GoalScreen(),
+                              builder: (context) => const GoalScreen(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Continue",
                           style: TextStyle(color: Colors.white),
                         ),
