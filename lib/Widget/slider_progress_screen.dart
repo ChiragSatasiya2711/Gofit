@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SliderProgressScreen extends StatefulWidget {
@@ -9,7 +8,7 @@ class SliderProgressScreen extends StatefulWidget {
 }
 
 class _SliderProgressScreenState extends State<SliderProgressScreen> {
-  PageController _pageController = PageController();
+  PageController pageController = PageController();
   int activePage = 0;
   List images = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png',
@@ -43,7 +42,7 @@ class _SliderProgressScreenState extends State<SliderProgressScreen> {
             child: PageView.builder(
                 itemCount: images.length,
                 pageSnapping: true,
-                controller: _pageController,
+                controller: pageController,
                 onPageChanged: (v) {
                   setState(() {
                     activePage = v;
