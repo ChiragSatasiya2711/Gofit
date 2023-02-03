@@ -14,7 +14,7 @@ class _Slider_pogressState extends State<Slider_pogress> {
   List images = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png',
     'https://tinypng.com/images/social/website.jpg',
-    'https://www.w3schools.com/css/img_forest.jpg'
+    'https://www.w3schools.com/css/img_forest.jpg',
   ];
   List<Widget> indicators(imagesLength, currentIndex) {
     return List<Widget>.generate(imagesLength, (index) {
