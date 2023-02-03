@@ -9,7 +9,7 @@ class ContinueScreen extends StatefulWidget {
 }
 
 class _ContinueScreenState extends State<ContinueScreen> {
-  Color color = Colors.grey;
+  bool ssss = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,23 +42,20 @@ class _ContinueScreenState extends State<ContinueScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    color = const Color(0xFF6842FF);
-                  });
+                  setState(() {});
                 },
                 onDoubleTap: () {
                   setState(() {
-                    color = Colors.grey;
+                    ssss = ssss;
                   });
                 },
                 child: Container(
                   height: height / 4.2,
                   width: width / 2,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(
                       Radius.circular(200),
                     ),
-                    color: color,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,23 +77,18 @@ class _ContinueScreenState extends State<ContinueScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    color = const Color(0xFF6842FF);
-                  });
+                  setState(() {});
                 },
                 onDoubleTap: () {
-                  setState(() {
-                    color = Colors.grey;
-                  });
+                  setState(() {});
                 },
                 child: Container(
                   height: height / 4.2,
                   width: width / 2,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(
                       Radius.circular(200),
                     ),
-                    color: color,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

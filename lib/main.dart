@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/slider_screen.dart';
+import 'package:gofit/Widget/slider_progress_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Data',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: NewScreeen(),
+      home: const SliderProgressScreen(),
     );
   }
 }
