@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/weight_screen.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -35,66 +34,64 @@ class _OldScreenState extends State<OldScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
-              SizedBox(
-                height: height / 1.5,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF0ECFF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text(
-                            "Back",
-                            style: TextStyle(
-                              color: Color(0xFF6842FF),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const WeightScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          "Continue",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //   children: [
+              //     Container(
+              //       height: height / 20,
+              //       width: width / 2.3,
+              //       decoration: const BoxDecoration(
+              //         color: Color(0xFFF0ECFF),
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(20),
+              //         ),
+              //       ),
+              //       child: Center(
+              //         child: TextButton(
+              //           onPressed: () {},
+              //           child: TextButton(
+              //             onPressed: () {
+              //               Navigator.pop(context);
+              //             },
+              //             child: const Text(
+              //               "Back",
+              //               style: TextStyle(
+              //                 color: Color(0xFF6842FF),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //     Container(
+              //       height: height / 20,
+              //       width: width / 2.3,
+              //       decoration: const BoxDecoration(
+              //         color: Color(0xFF6842FF),
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(20),
+              //         ),
+              //       ),
+              //       child: Center(
+              //         child: TextButton(
+              //           onPressed: () {
+              //             Navigator.push(
+              //               context,
+              //               MaterialPageRoute(
+              //                 builder: (context) => const WeightScreen(),
+              //               ),
+              //             );
+              //           },
+              //           child: const Text(
+              //             "Continue",
+              //             style: TextStyle(color: Colors.white),
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),

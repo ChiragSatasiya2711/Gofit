@@ -9,7 +9,7 @@ class ContinueScreen extends StatefulWidget {
 }
 
 class _ContinueScreenState extends State<ContinueScreen> {
-  bool ssss = false;
+  int _value = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -22,117 +22,95 @@ class _ContinueScreenState extends State<ContinueScreen> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: height / 30),
-          child: Column(
+          child: ListView(
             children: [
-              Text(
-                "Tell Us About Yourself",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
-              ),
-              SizedBox(
-                height: height / 40,
-              ),
-              Text(
-                "To give you a better experience and results \nwe need to know your gender.",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
-              ),
-              SizedBox(
-                height: height / 10,
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                onDoubleTap: () {
-                  setState(() {
-                    ssss = ssss;
-                  });
-                },
-                child: Container(
-                  height: height / 4.2,
-                  width: width / 2,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(200),
-                    ),
+              Column(
+                children: [
+                  Text(
+                    "Tell Us About Yourself",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  SizedBox(
+                    height: height / 40,
+                  ),
+                  Text(
+                    "To give you a better experience and results \nwe need to know your gender.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
+                  ),
+                  Column(
                     children: [
-                      Image.asset(
-                        "assets/images/new_image_6.png",
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "Male",
-                        style: TextStyle(color: Colors.white, fontSize: height / 25),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: height / 30,
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                onDoubleTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  height: height / 4.2,
-                  width: width / 2,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(200),
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Image.asset(
-                        "assets/images/new_image_7.png",
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "Female",
-                        style: TextStyle(color: Colors.white, fontSize: height / 25),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: height / 9,
-              ),
-              Container(
-                height: height / 20,
-                width: width / 1.3,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF6842FF),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                ),
-                child: Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const OldScreen(),
+                      GestureDetector(
+                        onTap: () => setState(() => _value = 0),
+                        child: Container(
+                          margin: EdgeInsets.only(top: height * 0.12, bottom: height * 0.02),
+                          height: height * 0.2,
+                          width: width * 0.4,
+                          decoration: BoxDecoration(
+                            color: _value == 0 ? Colors.blue : Colors.grey,
+                            borderRadius: BorderRadius.circular(width),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset("assets/images/new_image_6.png"),
+                              Text(
+                                "Male",
+                                style: TextStyle(color: Colors.white, fontSize: 20, height: 2),
+                              ),
+                            ],
+                          ),
                         ),
-                      );
-                    },
-                    child: Text(
-                      "Continue",
-                      style: TextStyle(color: Colors.white, fontSize: height / 50),
+                      ),
+                      GestureDetector(
+                        onTap: () => setState(() => _value = 1),
+                        child: Container(
+                          height: height * 0.2,
+                          width: width * 0.4,
+                          decoration: BoxDecoration(
+                            color: _value == 1 ? Colors.blue : Colors.grey,
+                            borderRadius: BorderRadius.circular(width),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset("assets/images/new_image_7.png"),
+                              Text("FeMale", style: TextStyle(height: 1, fontSize: 20, color: Colors.white)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: height / 8),
+                  Container(
+                    height: height / 20,
+                    width: width / 1.3,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF6842FF),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                    ),
+                    child: Center(
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const OldScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(color: Colors.white, fontSize: height / 50),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
