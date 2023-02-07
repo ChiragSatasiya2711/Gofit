@@ -1,31 +1,53 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class SliderScreen extends StatefulWidget {
-  const SliderScreen({Key? key}) : super(key: key);
+class NewScreeen extends StatefulWidget {
+  const NewScreeen({Key? key}) : super(key: key);
 
   @override
-  State<SliderScreen> createState() => _SliderScreenState();
+  State<NewScreeen> createState() => _NewScreeenState();
 }
 
-class _SliderScreenState extends State<SliderScreen> {
+class _NewScreeenState extends State<NewScreeen> {
+  List<int> name = [];
   int index = 0;
   CarouselController carouselController = CarouselController();
 
   List sliderList = [
     {
       "image": "assets/images/new_image_3.png",
-      "title": "Find the right\nWorkout for what \nyou need",
+      "title": "Find the right Workout for what you need",
+      "subtitle": "Workout for what you need",
     },
     {
       "image": "assets/images/new_image_4.png",
-      "title": "CREATE A WORKOUT PLAN\nto stay fit",
+      "title": "CREATE A WORKOUT PLAN to stay fit",
+      "subtitle": "to stay fit",
     },
     {
       "image": "assets/images/new_image_5.png",
-      "title": "ACTION IS THE\nKEY TO ALL SUCCESS",
+      "title": "ACTION IS THE KEY TO ALL SUCCESS",
+      "subtitle": "KEY TO ALL SUCCESS",
     },
   ];
+
+  List<Widget> indicators(imagesLength, currentIndex) {
+    return List<Widget>.generate(imagesLength, (index) {
+      return Container(
+        width: currentIndex == index ? 30 : 10,
+        height: 10,
+        margin: EdgeInsets.all(3),
+        decoration: BoxDecoration(
+            color: currentIndex == index ? Colors.black : Colors.black26,
+            borderRadius: currentIndex == index
+                ? BorderRadius.circular(10)
+                : BorderRadius.circular(100)),
+      );
+    });
+  }
+
+  PageController _pageController = PageController();
+  int activePage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,70 +61,99 @@ class _SliderScreenState extends State<SliderScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            CarouselSlider(
-              items: sliderList
-                  .map(
-                    (item) => Container(
-                      color: Colors.black,
-                      height: height * 1,
+            Container(
+              height: MediaQuery.of(context).size.height * 0.9,
+              child: PageView.builder(
+                  itemCount: sliderList.length,
+                  pageSnapping: true,
+                  controller: _pageController,
+                  onPageChanged: (v) {
+                    setState(() {
+                      activePage = v;
+                    });
+                  },
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.all(10),
                       child: Column(
                         children: [
-                          SizedBox(
-                            height: height / 1.7,
-                            width: width,
+                          Container(
                             child: Image.asset(
-                              sliderList[index]["image"],
-                              fit: BoxFit.fill,
+                              sliderList[index]['image'],
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          SizedBox(height: height / 25),
-                          RichText(
-                            text: TextSpan(
-                              text: sliderList[index]["title"],
-                              style: TextStyle(
-                                fontSize: text * 24,
-                                fontFamily: 'IntegralCF',
-                              ),
-                            ),
+                          SizedBox(
+                            height: 25,
                           ),
+                          Expanded(
+                              child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width:
+                                      index == 2 ? width * 0.43 : width * 0.58,
+                                  child: Text(
+                                    sliderList[index]['title'],
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 26,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: 'IntegralCF',
+                                        letterSpacing: 1),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: height * 0.04,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children:
+                                      indicators(sliderList.length, activePage),
+                                ),
+                                SizedBox(
+                                  height: height * 0.06,
+                                ),
+                                // CommanCompponentsScreen(index: activePage),
+                              ],
+                            ),
+                          ))
                         ],
                       ),
-                    ),
-                  )
-                  .toList(),
-              carouselController: carouselController,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: false,
-                height: height * 0.80,
-                viewportFraction: 1,
-                onPageChanged: (index, reason) {
-                  this.index = index;
-                  setState(() {});
-                },
+                    );
+                  }),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 22.0),
+              child: Container(
+                height: 45,
+                width: width,
+                decoration: BoxDecoration(
+                  color: Color(0xff6842FF),
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                ),
+                child: MaterialButton(
+                  onPressed: () {
+                    setState(() {
+                      activePage++;
+                      _pageController.animateToPage(activePage,
+                          duration: Duration(microseconds: 200),
+                          curve: Curves.bounceIn);
+                    });
+                  },
+                  child: Text(
+                    "Next",
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'IntegralCF',
+                        letterSpacing: 1),
+                  ),
+                ),
               ),
-            ),
-            SizedBox(height: height / 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: sliderList.asMap().entries.map(
-                (entry) {
-                  return GestureDetector(
-                    onTap: () => carouselController.animateToPage(entry.key),
-                    child: Container(
-                      width: 30.0,
-                      height: 8.0,
-                      margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        //shape: BoxShape.circle,
-                        color: Colors.red,
-                      ),
-                    ),
-                  );
-                },
-              ).toList(),
-            ),
+            )
           ],
         ),
       ),
