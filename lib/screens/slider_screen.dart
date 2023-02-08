@@ -106,7 +106,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                       children: indicators(sliderList.length, activePage),
                                     ),
                                     SizedBox(
-                                      height: height * 0.05,
+                                      height: height * 0.06,
                                     ),
                                     // CommanCompponentsScreen(index: activePage),
                                   ],
@@ -118,7 +118,7 @@ class _SliderScreenState extends State<SliderScreen> {
                       }),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
                   child: Container(
                     height: 45,
                     width: width,
