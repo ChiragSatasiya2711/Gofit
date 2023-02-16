@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/profile_screen.dart';
+import 'package:gofit/comman_screen/comman_compponents_screen.dart';
 
 class PhysicalActivityLevelScreen extends StatefulWidget {
   const PhysicalActivityLevelScreen({Key? key}) : super(key: key);
@@ -36,59 +36,33 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
               SizedBox(
-                height: height / 1.5,
+                height: height / 5,
+              ),
+              CommanCompponentsScreen(title: "Beginner"),
+              SizedBox(
+                height: 10,
+              ),
+              CommanCompponentsScreen(title: "Intermediate"),
+              SizedBox(
+                height: 10,
+              ),
+              CommanCompponentsScreen(title: "Advanced"),
+              SizedBox(
+                height: 180,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF0ECFF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Text(
-                          "Back",
-                          style: TextStyle(
-                            color: Color(0xFF6842FF),
-                          ),
-                        ),
-                      ),
-                    ),
+                  CommanCompponentsScreen(
+                    title: "Cancel",
+                    width: 150,
                   ),
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ProfileScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          "Continue",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  CommanCompponentsScreen(
+                    title: "Continue",
+                    width: 150,
                   ),
                 ],
               ),
