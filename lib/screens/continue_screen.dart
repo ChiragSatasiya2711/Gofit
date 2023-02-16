@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/old_screen.dart';
 
 class ContinueScreen extends StatefulWidget {
   const ContinueScreen({Key? key}) : super(key: key);
@@ -45,8 +44,8 @@ class _ContinueScreenState extends State<ContinueScreen> {
                         onTap: () => setState(() => _value = 0),
                         child: Container(
                           margin: EdgeInsets.only(top: height * 0.12, bottom: height * 0.02),
-                          height: height * 0.2,
-                          width: width * 0.4,
+                          height: height * 0.19,
+                          width: width * 0.42,
                           decoration: BoxDecoration(
                             color: _value == 0 ? Colors.blue : Colors.grey,
                             borderRadius: BorderRadius.circular(width),
@@ -55,9 +54,10 @@ class _ContinueScreenState extends State<ContinueScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset("assets/images/new_image_6.png"),
+                              SizedBox(height: height * 0.01),
                               Text(
                                 "Male",
-                                style: TextStyle(color: Colors.white, fontSize: 20, height: 2),
+                                style: TextStyle(color: Colors.white, fontSize: text * 18, height: 2, fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
@@ -66,8 +66,8 @@ class _ContinueScreenState extends State<ContinueScreen> {
                       GestureDetector(
                         onTap: () => setState(() => _value = 1),
                         child: Container(
-                          height: height * 0.2,
-                          width: width * 0.4,
+                          height: height * 0.19,
+                          width: width * 0.42,
                           decoration: BoxDecoration(
                             color: _value == 1 ? Colors.blue : Colors.grey,
                             borderRadius: BorderRadius.circular(width),
@@ -76,7 +76,8 @@ class _ContinueScreenState extends State<ContinueScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset("assets/images/new_image_7.png"),
-                              Text("FeMale", style: TextStyle(height: 1, fontSize: 20, color: Colors.white)),
+                              SizedBox(height: height * 0.01),
+                              Text("Female", style: TextStyle(height: 1, fontSize: text * 18, color: Colors.white, fontWeight: FontWeight.bold)),
                             ],
                           ),
                         ),
@@ -84,32 +85,6 @@ class _ContinueScreenState extends State<ContinueScreen> {
                     ],
                   ),
                   SizedBox(height: height / 8),
-                  Container(
-                    height: height / 20,
-                    width: width / 1.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const OldScreen(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          "Continue",
-                          style: TextStyle(color: Colors.white, fontSize: height / 50),
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ],
