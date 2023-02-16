@@ -1,28 +1,25 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-class CommanCompponentsScreen extends StatelessWidget {
+class CommanCantainer extends StatelessWidget {
   final String? title;
-  final double? width;
-  final bool? Color;
-
-  const CommanCompponentsScreen.CommanContainer({
+  CommanCantainer.CommanContainer({
     Key? key,
     this.title,
-    this.width, this.Color,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 55,
-      width: width,
+      width: double.infinity,
+      margin: EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-
-        borderRadius: BorderRadius.all(
-          Radius.circular(15),
-        ),
-      ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+          color: Color(0xFF6842FF)),
       child: Center(
           child: Text(
         "$title",

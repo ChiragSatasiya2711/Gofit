@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/comman_screen/comman_compponents_screen.dart';
 
 class PhysicalActivityLevelScreen extends StatefulWidget {
   const PhysicalActivityLevelScreen({Key? key}) : super(key: key);
@@ -38,35 +37,13 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               SizedBox(
                 height: height / 5,
               ),
-              const CommanCompponentsScreen.CommanContainer(title: "Beginner"),
-              const SizedBox(
-                height: 10,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                child: Column(
+                  children: [],
+                ),
               ),
-              const CommanCompponentsScreen.CommanContainer(title: "Intermediate"),
-              const SizedBox(
-                height: 10,
-              ),
-              const CommanCompponentsScreen.CommanContainer(title: "Advanced"),
-              const SizedBox(
-                height: 180,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  CommanCompponentsScreen.CommanContainer(
-                    title: "Cancel",
-                    width: 150,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  CommanCompponentsScreen.CommanContainer(
-                    title: "Continue",
-                    width: 150,
-                    Color: ,
-                  ),
-                ],
-              ),
+              SizedBox(height: height / 6),
             ],
           ),
         ),
