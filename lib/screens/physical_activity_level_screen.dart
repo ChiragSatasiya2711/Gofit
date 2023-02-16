@@ -38,7 +38,10 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               SizedBox(
                 height: height / 5,
               ),
-              const CommanCompponentsScreen.CommanContainer(title: "Beginner"),
+              const CommanCompponentsScreen.CommanContainer(
+                title: "Beginner",
+                color: Color(0xFFF2F2F2),
+              ),
               const SizedBox(
                 height: 10,
               ),
@@ -63,7 +66,6 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                   CommanCompponentsScreen.CommanContainer(
                     title: "Continue",
                     width: 150,
-                    Color: ,
                   ),
                 ],
               ),
