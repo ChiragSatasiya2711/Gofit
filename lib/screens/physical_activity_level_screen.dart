@@ -38,31 +38,32 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               SizedBox(
                 height: height / 5,
               ),
-              CommanCompponentsScreen(title: "Beginner"),
-              SizedBox(
+              const CommanCompponentsScreen.CommanContainer(title: "Beginner"),
+              const SizedBox(
                 height: 10,
               ),
-              CommanCompponentsScreen(title: "Intermediate"),
-              SizedBox(
+              const CommanCompponentsScreen.CommanContainer(title: "Intermediate"),
+              const SizedBox(
                 height: 10,
               ),
-              CommanCompponentsScreen(title: "Advanced"),
-              SizedBox(
+              const CommanCompponentsScreen.CommanContainer(title: "Advanced"),
+              const SizedBox(
                 height: 180,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  CommanCompponentsScreen(
+                children: const [
+                  CommanCompponentsScreen.CommanContainer(
                     title: "Cancel",
                     width: 150,
                   ),
                   SizedBox(
                     width: 20,
                   ),
-                  CommanCompponentsScreen(
+                  CommanCompponentsScreen.CommanContainer(
                     title: "Continue",
                     width: 150,
+                    Color: ,
                   ),
                 ],
               ),

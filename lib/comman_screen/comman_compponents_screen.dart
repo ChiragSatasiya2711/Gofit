@@ -1,13 +1,16 @@
+import 'dart:ui';
+';
 import 'package:flutter/material.dart';
 
 class CommanCompponentsScreen extends StatelessWidget {
   final String? title;
   final double? width;
+  final bool? Color;
 
-  const CommanCompponentsScreen({
+  const CommanCompponentsScreen.CommanContainer({
     Key? key,
     this.title,
-    this.width,
+    this.width, this.Color,
   }) : super(key: key);
 
   @override
@@ -16,7 +19,7 @@ class CommanCompponentsScreen extends StatelessWidget {
       height: 55,
       width: width,
       decoration: BoxDecoration(
-        color: Color(0xffF2F2F2),
+
         borderRadius: BorderRadius.all(
           Radius.circular(15),
         ),
@@ -24,7 +27,7 @@ class CommanCompponentsScreen extends StatelessWidget {
       child: Center(
           child: Text(
         "$title",
-        style: TextStyle(fontSize: 26, color: Colors.white, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1),
+        style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1),
       )),
     );
   }
