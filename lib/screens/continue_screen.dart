@@ -38,51 +38,47 @@ class _ContinueScreenState extends State<ContinueScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
                   ),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () => setState(() => _value = 0),
-                        child: Container(
-                          margin: EdgeInsets.only(top: height * 0.12, bottom: height * 0.02),
-                          height: height * 0.19,
-                          width: width * 0.42,
-                          decoration: BoxDecoration(
-                            color: _value == 0 ? Colors.blue : Colors.grey,
-                            borderRadius: BorderRadius.circular(width),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset("assets/images/new_image_6.png"),
-                              SizedBox(height: height * 0.01),
-                              Text(
-                                "Male",
-                                style: TextStyle(color: Colors.white, fontSize: text * 18, height: 2, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
+                  GestureDetector(
+                    onTap: () => setState(() => _value = 0),
+                    child: Container(
+                      margin: EdgeInsets.only(top: height * 0.12, bottom: height * 0.02),
+                      height: height * 0.19,
+                      width: width * 0.42,
+                      decoration: BoxDecoration(
+                        color: _value == 0 ? Colors.blue : Colors.grey,
+                        borderRadius: BorderRadius.circular(width),
                       ),
-                      GestureDetector(
-                        onTap: () => setState(() => _value = 1),
-                        child: Container(
-                          height: height * 0.19,
-                          width: width * 0.42,
-                          decoration: BoxDecoration(
-                            color: _value == 1 ? Colors.blue : Colors.grey,
-                            borderRadius: BorderRadius.circular(width),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset("assets/images/new_image_6.png"),
+                          SizedBox(height: height * 0.01),
+                          Text(
+                            "Male",
+                            style: TextStyle(color: Colors.white, fontSize: text * 18, height: 2, fontWeight: FontWeight.bold),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset("assets/images/new_image_7.png"),
-                              SizedBox(height: height * 0.01),
-                              Text("Female", style: TextStyle(height: 1, fontSize: text * 18, color: Colors.white, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () => setState(() => _value = 1),
+                    child: Container(
+                      height: height * 0.19,
+                      width: width * 0.42,
+                      decoration: BoxDecoration(
+                        color: _value == 1 ? Colors.blue : Colors.grey,
+                        borderRadius: BorderRadius.circular(width),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset("assets/images/new_image_7.png"),
+                          SizedBox(height: height * 0.01),
+                          Text("Female", style: TextStyle(height: 1, fontSize: text * 18, color: Colors.white, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
                   ),
                   SizedBox(height: height / 8),
                 ],

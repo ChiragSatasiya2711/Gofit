@@ -2,9 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class CommanContainer extends StatelessWidget {
+class CommanCantainer extends StatelessWidget {
   final String? title;
-  CommanContainer.CommanContainer({
+  CommanCantainer({
     Key? key,
     this.title,
   }) : super(key: key);
@@ -14,16 +14,16 @@ class CommanContainer extends StatelessWidget {
     return Container(
       height: 55,
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      decoration: const BoxDecoration(
+      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+      decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
-            Radius.circular(15),
+            Radius.circular(25),
           ),
           color: Color(0xFF6842FF)),
       child: Center(
           child: Text(
         "$title",
-        style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1),
+        style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1, color: Colors.white),
       )),
     );
   }
