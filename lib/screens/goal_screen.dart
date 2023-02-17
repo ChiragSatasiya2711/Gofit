@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/back_screen.dart';
+import 'package:gofit/comman_screen/continue_screen.dart';
 import 'package:gofit/screens/physical_activity_level_screen.dart';
 
 class GoalScreen extends StatefulWidget {
@@ -19,7 +21,7 @@ class _GoalScreenState extends State<GoalScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: width / 12, top: height / 20),
+          padding: EdgeInsets.only(top: height / 20),
           child: Column(
             children: [
               Text(
@@ -40,57 +42,22 @@ class _GoalScreenState extends State<GoalScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF0ECFF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Text(
-                          "Back",
-                          style: TextStyle(
-                            color: Color(0xFF6842FF),
-                          ),
-                        ),
-                      ),
-                    ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: BackScreen(),
                   ),
-                  SizedBox(
-                    width: width / 30,
-                  ),
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => PhysicalActivityLevelScreen(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          "Continue",
-                          style: TextStyle(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PhysicalActivityLevelScreen(),
                         ),
-                      ),
-                    ),
+                      );
+                    },
+                    child: ContinueScreen(),
                   ),
                 ],
               ),

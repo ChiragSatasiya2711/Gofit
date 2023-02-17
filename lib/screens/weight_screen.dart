@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/back_screen.dart';
+import 'package:gofit/comman_screen/continue_screen.dart';
 import 'package:gofit/screens/height_screen.dart';
 
 class WeightScreen extends StatefulWidget {
@@ -41,54 +43,22 @@ class _WeightScreenState extends State<WeightScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF0ECFF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Text(
-                          "Back",
-                          style: TextStyle(
-                            color: Color(0xFF6842FF),
-                          ),
-                        ),
-                      ),
-                    ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: BackScreen(),
                   ),
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HeightScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          "Continue",
-                          style: TextStyle(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HeightScreen(),
                         ),
-                      ),
-                    ),
+                      );
+                    },
+                    child: ContinueScreen(),
                   ),
                 ],
               ),

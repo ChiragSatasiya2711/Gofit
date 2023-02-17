@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/skip_screen.dart';
+import 'package:gofit/comman_screen/start_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -39,41 +41,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF0ECFF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Skip",
-                        style: TextStyle(
-                          color: Color(0xFF6842FF),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: height / 20,
-                    width: width / 2.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF6842FF),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Start",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
+                children: const [
+                  SkipScreen(),
+                  StartScreen(),
                 ],
               ),
             ],

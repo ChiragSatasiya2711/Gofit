@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/back_screen.dart';
+import 'package:gofit/comman_screen/continue_screen.dart';
+import 'package:gofit/screens/profile_screen.dart';
 
 class PhysicalActivityLevelScreen extends StatefulWidget {
   const PhysicalActivityLevelScreen({Key? key}) : super(key: key);
@@ -43,7 +46,31 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                   children: [],
                 ),
               ),
-              SizedBox(height: height / 6),
+              SizedBox(
+                height: height / 2,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: BackScreen(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: ContinueScreen(),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
