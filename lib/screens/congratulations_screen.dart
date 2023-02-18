@@ -35,54 +35,56 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: text * 12, height: 2),
               ),
               Divider(color: Color(0xFF9E9E9E), thickness: 0.2, height: height * 0.06),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "10",
-                        style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                      Text(
-                        "Workout",
-                        style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  VerticalDivider(
-                    color: Colors.black,
-                    thickness: 1,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "340",
-                        style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                      Text(
-                        "Cal",
-                        style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  VerticalDivider(
-                    color: Colors.blue,
-                    thickness: 1,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "10:00",
-                        style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                      Text(
-                        "Minutes",
-                        style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
-                      ),
-                    ],
-                  ),
-                ],
+              Container(
+                width: double.infinity,
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          "10",
+                          style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                        Text(
+                          "Workout",
+                          style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    VerticalDivider(
+                      thickness: 1,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "340",
+                          style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                        Text(
+                          "Cal",
+                          style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    VerticalDivider(
+                      thickness: 1,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "10:00",
+                          style: TextStyle(fontSize: text * 30, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                        Text(
+                          "Minutes",
+                          style: TextStyle(fontSize: text * 14, fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: height * 0.08),
               CommanCantainer(title: "Next to Another Workout"),
