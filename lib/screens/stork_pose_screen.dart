@@ -1,14 +1,14 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 
-class SidePlank extends StatefulWidget {
-  const SidePlank({Key? key}) : super(key: key);
+class StorkPoseScreen extends StatefulWidget {
+  const StorkPoseScreen({Key? key}) : super(key: key);
 
   @override
-  State<SidePlank> createState() => _SidePlankState();
+  State<StorkPoseScreen> createState() => _StorkPoseScreenState();
 }
 
-class _SidePlankState extends State<SidePlank> {
+class _StorkPoseScreenState extends State<StorkPoseScreen> {
   CountDownController _controller = CountDownController();
   bool _ispushed = false;
 
@@ -46,7 +46,7 @@ class _SidePlankState extends State<SidePlank> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: height * 0.02),
               child: Text(
-                "Side Plank",
+                "Stork Pose",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: text * 30),
               ),
             ),

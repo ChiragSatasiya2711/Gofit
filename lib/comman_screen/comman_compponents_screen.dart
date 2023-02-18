@@ -14,7 +14,7 @@ class CommanCantainer extends StatelessWidget {
     return Container(
       height: 55,
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(25),
@@ -23,7 +23,7 @@ class CommanCantainer extends StatelessWidget {
       child: Center(
           child: Text(
         "$title",
-        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1, color: Colors.white),
+        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500, fontFamily: 'IntegralCF', letterSpacing: 1, color: Colors.white),
       )),
     );
   }

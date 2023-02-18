@@ -38,7 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
   percent_indicator: ^4.2.2
-  circular_countdown_timer: ^0.0.8
+  circular_countdown_timer: ^0.2.3
 
 dev_dependencies:
   flutter_test:
