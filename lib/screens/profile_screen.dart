@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/comman_screen/skip_screen.dart';
-import 'package:gofit/comman_screen/start_screen.dart';
+import 'package:gofit/comman_screen/back_continue_comman.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -39,12 +38,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(
                 height: height / 1.5,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  SkipScreen(),
-                  StartScreen(),
-                ],
+              const BackContinueComman(
+                title: "Skip",
+                data: "Start",
               ),
             ],
           ),

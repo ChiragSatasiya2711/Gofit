@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/comman_compponents_screen.dart';
+import 'package:gofit/screens/old_screen.dart';
 
 class ContinueScreen extends StatefulWidget {
   const ContinueScreen({Key? key}) : super(key: key);
@@ -81,6 +83,19 @@ class _ContinueScreenState extends State<ContinueScreen> {
                     ),
                   ),
                   SizedBox(height: height / 8),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => OldScreen(),
+                        ),
+                      );
+                    },
+                    child: CommanCantainer(
+                      title: "Continue",
+                    ),
+                  ),
                 ],
               ),
             ],

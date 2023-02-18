@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/comman_screen/back_screen.dart';
-import 'package:gofit/comman_screen/continue_screen.dart';
-import 'package:gofit/screens/height_screen.dart';
+import 'package:gofit/comman_screen/back_continue_comman.dart';
 
 class WeightScreen extends StatefulWidget {
   const WeightScreen({Key? key}) : super(key: key);
@@ -40,27 +38,9 @@ class _WeightScreenState extends State<WeightScreen> {
               SizedBox(
                 height: height / 1.5,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: BackScreen(),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HeightScreen(),
-                        ),
-                      );
-                    },
-                    child: ContinueScreen(),
-                  ),
-                ],
+              BackContinueComman(
+                title: "Back",
+                data: "Continue",
               ),
             ],
           ),
