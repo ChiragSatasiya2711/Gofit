@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/comman_compponents_screen.dart';
+import 'package:gofit/screens/get_ready_screen.dart';
 
 class WorkoutActivity extends StatefulWidget {
   const WorkoutActivity({Key? key}) : super(key: key);
@@ -49,7 +50,8 @@ class _WorkoutActivityState extends State<WorkoutActivity> {
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) => Container(
-                    height: height * 0.18,
+                    height: height * 0.12,
+                    margin: EdgeInsets.all(16),
                     width: double.infinity,
                     color: Color(0xFFF8F5F5),
                     child: Row(
@@ -84,8 +86,17 @@ class _WorkoutActivityState extends State<WorkoutActivity> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: CommanCantainer(
-          title: "Start",
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => GetReadyScreen(),
+                ));
+          },
+          child: CommanCantainer(
+            title: "Start",
+          ),
         ),
       ),
     );
