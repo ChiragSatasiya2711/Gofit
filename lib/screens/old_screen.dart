@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/comman_screen/back_screen.dart';
-import 'package:gofit/screens/weight_screen.dart';
-
-import '../comman_screen/continue_screen.dart';
+import 'package:gofit/comman_screen/back_continue_comman.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -41,26 +38,9 @@ class _OldScreenState extends State<OldScreen> {
               SizedBox(
                 height: height / 1.5,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: BackScreen(),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => WeightScreen(),
-                          ));
-                    },
-                    child: ContinueScreen(),
-                  ),
-                ],
+              BackContinueComman(
+                title: "Back",
+                data: "Continue",
               ),
             ],
           ),
