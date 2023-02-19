@@ -69,7 +69,7 @@ class _GetReadyScreenState extends State<GetReadyScreen> {
                   builder: (context) => SidePlank(),
                 ));
           },
-          child: CommanCantainer(
+          child: CommanContainer(
             title: "Start",
           ),
         ),

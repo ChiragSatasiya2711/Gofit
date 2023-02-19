@@ -92,7 +92,7 @@ class _ContinueScreenState extends State<ContinueScreen> {
                         ),
                       );
                     },
-                    child: CommanCantainer(
+                    child: CommanContainer(
                       title: "Continue",
                     ),
                   ),

@@ -2,9 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class CommanCantainer extends StatelessWidget {
+class CommanContainer extends StatelessWidget {
   final String? title;
-  CommanCantainer({
+  CommanContainer({
     Key? key,
     this.title,
   }) : super(key: key);

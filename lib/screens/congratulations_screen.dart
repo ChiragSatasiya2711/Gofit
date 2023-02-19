@@ -87,7 +87,7 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
                 ),
               ),
               SizedBox(height: height * 0.08),
-              CommanCantainer(title: "Next to Another Workout"),
+              CommanContainer(title: "Next to Another Workout"),
               Container(
                 height: 55,
                 width: double.infinity,

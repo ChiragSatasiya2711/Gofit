@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/comman_compponents_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
@@ -19,11 +20,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
-              children: [
+              children: const [
                 BackButton(),
                 Text(
                   "Forgot Password",
@@ -31,15 +32,15 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Image.asset("assets/images/human_photo.png"),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Text("Select which contact details should we use to reset\nyour password"),
-            SizedBox(
+            const Text("Select which contact details should we use to reset\nyour password"),
+            const SizedBox(
               height: 40,
             ),
             Container(
@@ -47,9 +48,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               width: width / 1.2,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Color(0xFF6842FF),
+                  color: const Color(0xFF6842FF),
                 ),
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(20),
                 ),
               ),
@@ -68,7 +69,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     padding: const EdgeInsets.only(top: 30, right: 110),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           "via SMS:",
                           style: TextStyle(color: Colors.grey),
@@ -86,7 +87,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -96,10 +97,48 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 border: Border.all(
                   color: Colors.grey,
                 ),
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(20),
                 ),
               ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Image.asset(
+                      "assets/images/email_images.png",
+                      scale: 1.2,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30, right: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "via SMS:",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        SizedBox(
+                          height: 7,
+                        ),
+                        Text(
+                          "and***ey@yourdomain.com",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            CommanContainer(
+              title: "Continue",
             ),
           ],
         ),

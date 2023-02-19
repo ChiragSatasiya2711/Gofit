@@ -94,7 +94,7 @@ class _WorkoutActivityState extends State<WorkoutActivity> {
                   builder: (context) => GetReadyScreen(),
                 ));
           },
-          child: CommanCantainer(
+          child: CommanContainer(
             title: "Start",
           ),
         ),
