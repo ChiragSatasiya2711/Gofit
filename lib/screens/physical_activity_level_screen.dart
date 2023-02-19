@@ -9,6 +9,7 @@ class PhysicalActivityLevelScreen extends StatefulWidget {
 }
 
 class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScreen> {
+  int _value = 0;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -38,16 +39,73 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               SizedBox(
                 height: height / 5,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                child: Column(
-                  children: [],
+              GestureDetector(
+                onTap: () => setState(() => _value = 0),
+                child: Container(
+                  height: 58,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                    color: _value == 1 ? Colors.blue : Color(0xFFF2F2F2),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Beginner",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              GestureDetector(
+                onTap: () => setState(() => _value = 1),
+                child: Container(
+                  height: 58,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                    color: _value == 0 ? Colors.blue : Color(0xFFF2F2F2),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Intermediate",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              GestureDetector(
+                onTap: () => setState(() => _value = 0),
+                child: Container(
+                  height: 58,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                    color: _value == 0 ? Colors.blue : Color(0xFFF2F2F2),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Advanced",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
                 ),
               ),
               SizedBox(
-                height: height / 2,
+                height: height / 4,
               ),
-              BackContinueComman(
+              const BackContinueComman(
                 title: "Back",
                 data: "Continue",
               ),

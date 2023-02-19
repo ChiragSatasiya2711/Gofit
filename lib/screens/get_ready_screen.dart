@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/comman_compponents_screen.dart';
 import 'package:gofit/screens/side_plank.dart';
-import 'package:percent_indicator/percent_indicator.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class GetReadyScreen extends StatefulWidget {
   const GetReadyScreen({Key? key}) : super(key: key);
