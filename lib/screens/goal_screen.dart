@@ -36,7 +36,187 @@ class _GoalScreenState extends State<GoalScreen> {
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),
               SizedBox(
-                height: height / 1.5,
+                height: height / 18,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  border: Border.all(
+                    color: Color(0xFF7E5DFF),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 2.5),
+                      child: Center(
+                        child: Text(
+                          "Get Fitter",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 50,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  border: Border.all(
+                    color: Color(0xFF7E5DFF),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 3),
+                      child: Center(
+                        child: Text(
+                          "Gain Weight",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 50,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  color: Colors.grey.shade300,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 3),
+                      child: Center(
+                        child: Text(
+                          "Lose Weight",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 50,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  border: Border.all(
+                    color: Color(0xFF7E5DFF),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 4),
+                      child: Center(
+                        child: Text(
+                          "Building Muscles",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 50,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  color: Colors.grey.shade300,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 4.5),
+                      child: Center(
+                        child: Text(
+                          "Improving Endurance",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 50,
+              ),
+              Container(
+                height: height / 15,
+                width: width / 1.2,
+                // color: Colors.black,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                  color: Colors.grey.shade300,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: width / 2.1),
+                      child: Center(
+                        child: Text(
+                          "Others",
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Image.asset("assets/images/select.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 10,
               ),
               BackContinueComman(
                 title: "Back",
