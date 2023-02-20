@@ -9,6 +9,8 @@ class OldScreen extends StatefulWidget {
 }
 
 class _OldScreenState extends State<OldScreen> {
+  final FixedExtentScrollController _controller = FixedExtentScrollController(initialItem: 15);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,8 +37,22 @@ class _OldScreenState extends State<OldScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
-              SizedBox(
-                height: height / 1.5,
+              SizedBox(height: height * 0.06),
+              Container(
+                height: height / 2,
+                child: ListWheelScrollView.useDelegate(
+                  physics: BouncingScrollPhysics(),
+                  itemExtent: 30,
+                  controller: _controller,
+                  childDelegate: ListWheelChildBuilderDelegate(
+                      childCount: 50,
+                      builder: (context, index) {
+                        return Text(
+                          index.toString(),
+                          style: TextStyle(fontSize: text * 40),
+                        );
+                      }),
+                ),
               ),
               BackContinueComman(
                 title: "Back",

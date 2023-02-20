@@ -1,3 +1,4 @@
+import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
 
@@ -9,7 +10,6 @@ class PhysicalActivityLevelScreen extends StatefulWidget {
 }
 
 class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScreen> {
-  int _value = 0;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -29,7 +29,7 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
               ),
               SizedBox(
-                height: height / 40,
+                height: height * 0.03,
               ),
               Text(
                 "Choose your regular activity level.This will \nhelp us to personalize plans for you.",
@@ -37,73 +37,36 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
               SizedBox(
-                height: height / 5,
+                height: height / 5.6,
               ),
-              GestureDetector(
-                onTap: () => setState(() => _value = 0),
-                child: Container(
-                  height: 58,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(12),
-                    ),
-                    color: _value == 1 ? Colors.blue : Color(0xFFF2F2F2),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Beginner",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              GestureDetector(
-                onTap: () => setState(() => _value = 1),
-                child: Container(
-                  height: 58,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(12),
-                    ),
-                    color: _value == 0 ? Colors.blue : Color(0xFFF2F2F2),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Intermediate",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              GestureDetector(
-                onTap: () => setState(() => _value = 0),
-                child: Container(
-                  height: 58,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(12),
-                    ),
-                    color: _value == 0 ? Colors.blue : Color(0xFFF2F2F2),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Advanced",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
+              CustomCheckBoxGroup(
+                unSelectedColor: Color(0xFFF2F2F2),
+                buttonLables: [
+                  "Beginner",
+                  "Intermediate",
+                  "Advanced",
+                ],
+                buttonValuesList: [
+                  "Beginner",
+                  "Intermediate",
+                  "Advanced",
+                ],
+                checkBoxButtonValues: (values) {
+                  print(values);
+                },
+                horizontal: true,
+                height: height * 0.07,
+                selectedColor: Colors.blue,
+                customShape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(
+                      color: Color(0xFFF2F2F2),
+                    )),
+                enableShape: true,
+                padding: 5,
               ),
               SizedBox(
-                height: height / 4,
+                height: height * 0.16,
               ),
               const BackContinueComman(
                 title: "Back",

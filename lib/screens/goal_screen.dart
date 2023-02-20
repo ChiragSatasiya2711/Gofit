@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/physical_activity_level_screen.dart';
 
 import '../comman_screen/back_continue_comman.dart';
 
@@ -10,6 +11,17 @@ class GoalScreen extends StatefulWidget {
 }
 
 class _GoalScreenState extends State<GoalScreen> {
+  Map data = {
+    "data": [
+      {"data1": "Get Fitter", "data2": false},
+      {"data1": "Gain Weight", "data2": false},
+      {"data1": "Lose Weight", "data2": false},
+      {"data1": "Building Muscles", "data2": false},
+      {"data1": "Improving Endurance", "data2": false},
+      {"data1": "Others", "data2": false},
+    ],
+  };
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -39,186 +51,52 @@ class _GoalScreenState extends State<GoalScreen> {
                 height: height / 18,
               ),
               Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  border: Border.all(
-                    color: Color(0xFF7E5DFF),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 2.5),
-                      child: Center(
-                        child: Text(
-                          "Get Fitter",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
-                        ),
+                height: height / 1.6,
+                child: ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  itemCount: data["data"].length,
+                  itemBuilder: (context, index) => Container(
+                    height: height / 15,
+                    margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                      border: Border.all(
+                        color: Color(0xFF7E5DFF),
                       ),
                     ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 50,
-              ),
-              Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  border: Border.all(
-                    color: Color(0xFF7E5DFF),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 3),
-                      child: Center(
-                        child: Text(
-                          "Gain Weight",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text(
+                            "${data["data"][index]["data1"]}",
+                            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
+                          ),
                         ),
-                      ),
+                        Checkbox(
+                          value: data["data"][index]["data2"],
+                          onChanged: (bool? value) {
+                            setState(() {
+                              data["data"][index]["data2"] = value!;
+                            });
+                          },
+                        )
+                      ],
                     ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 50,
-              ),
-              Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  color: Colors.grey.shade300,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 3),
-                      child: Center(
-                        child: Text(
-                          "Lose Weight",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 50,
-              ),
-              Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  border: Border.all(
-                    color: Color(0xFF7E5DFF),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 4),
-                      child: Center(
-                        child: Text(
-                          "Building Muscles",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 50,
-              ),
-              Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  color: Colors.grey.shade300,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 4.5),
-                      child: Center(
-                        child: Text(
-                          "Improving Endurance",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 50,
-              ),
-              Container(
-                height: height / 15,
-                width: width / 1.2,
-                // color: Colors.black,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  color: Colors.grey.shade300,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: width / 2.1),
-                      child: Center(
-                        child: Text(
-                          "Others",
-                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    Image.asset("assets/images/select.png"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: height / 10,
               ),
               BackContinueComman(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PhysicalActivityLevelScreen(),
+                      ));
+                },
                 title: "Back",
                 data: "Continue",
               ),
