@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/notification_screen.dart';
-
+import 'package:gofit/screens/take_rest_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NotificationScreen(),
+      home: const TakeRestScreen(),
     );
   }
 }

@@ -40,7 +40,12 @@ class _WorkoutActivityState extends State<WorkoutActivity> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: width * 0.02, right: width * 0.04),
-                    child: Icon(Icons.arrow_back, size: 25),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back, size: 25),
+                    ),
                   ),
                   Text("Workout Activity", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
                 ],
