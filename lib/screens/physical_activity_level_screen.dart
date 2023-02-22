@@ -41,12 +41,12 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               ),
               CustomCheckBoxGroup(
                 unSelectedColor: Color(0xFFF2F2F2),
-                buttonLables: [
+                buttonLables: const [
                   "Beginner",
                   "Intermediate",
                   "Advanced",
                 ],
-                buttonValuesList: [
+                buttonValuesList: const [
                   "Beginner",
                   "Intermediate",
                   "Advanced",
