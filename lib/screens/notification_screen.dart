@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
@@ -15,6 +17,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   bool status4 = false;
   bool status5 = false;
   bool status6 = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 20),
+              padding: const EdgeInsets.only(top: 20, left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -49,7 +52,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 165,
                       ),
                       FlutterSwitch(
@@ -77,7 +80,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 265,
                       ),
                       FlutterSwitch(
@@ -105,7 +108,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(width: 260,),
+                      const SizedBox(
+                        width: 260,
+                      ),
                       FlutterSwitch(
                         value: status3,
                         height: 25,
@@ -118,7 +123,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -131,7 +136,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(width: 220,),
+                      const SizedBox(
+                        width: 220,
+                      ),
                       FlutterSwitch(
                         value: status4,
                         height: 25,
@@ -144,7 +151,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -157,7 +164,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(width: 150,),
+                      const SizedBox(
+                        width: 150,
+                      ),
                       FlutterSwitch(
                         value: status5,
                         height: 25,
@@ -183,7 +192,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(width: 180,),
+                      const SizedBox(
+                        width: 180,
+                      ),
                       FlutterSwitch(
                         value: status6,
                         height: 25,
