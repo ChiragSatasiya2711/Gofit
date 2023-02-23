@@ -67,7 +67,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                   ),
                 ],
               ),
-              Text(
+              const Text(
                 "Yoga Body Stretching",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25, height: 2),
               ),
@@ -94,7 +94,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                               borderRadius: BorderRadiusDirectional.circular(25)),
                           label: Text(
                             date[index],
-                            style: GoogleFonts.rubik(color: Color(0xFF6842FF)),
+                            style: GoogleFonts.rubik(color: const Color(0xFF6842FF)),
                           ),
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           backgroundColor: Colors.white,
@@ -114,7 +114,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Workout Activity",
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -123,11 +123,11 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => WorkoutActivity(),
+                            builder: (context) => const WorkoutActivity(),
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         "See All",
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF6842FF)),
                       ),
@@ -141,9 +141,9 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) => Container(
                     height: height * 0.12,
-                    margin: EdgeInsets.all(16),
+                    margin: const EdgeInsets.all(16),
                     width: double.infinity,
-                    color: Color(0xFFF8F5F5),
+                    color: const Color(0xFFF8F5F5),
                     child: Row(
                       children: [
                         Image.asset(
@@ -161,7 +161,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                             SizedBox(height: height * 0.02),
                             Text(
                               "${userData["userData"][index]["data2"]}",
-                              style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                              style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                             ),
                           ],
                         )
@@ -178,10 +178,11 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
           child: GestureDetector(
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => GetReadyScreen(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const GetReadyScreen(),
+                ),
+              );
             },
             child: CommanContainer(
               title: "Start",

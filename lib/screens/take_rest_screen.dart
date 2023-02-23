@@ -23,7 +23,7 @@ class _TakeRestScreenState extends State<TakeRestScreen> {
                 child: BackButton(),
               ),
             ),
-            Center(
+            const Center(
               child: Text(
                 "TAKE A REST",
                 style: TextStyle(
