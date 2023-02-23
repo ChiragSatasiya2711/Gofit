@@ -8,7 +8,7 @@ class BottomNavigationBar extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
         child: Container(
-          padding: EdgeInsets.only(bottom: 10, top: 10),
+          padding: const EdgeInsets.only(bottom: 10, top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

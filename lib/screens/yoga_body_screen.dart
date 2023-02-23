@@ -45,9 +45,14 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                 children: [
                   Image.asset("assets/images/image_four.png"),
                   Row(
-                    children: const [
-                      BackButton(
-                        color: Colors.white,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: BackButton(
+                          color: Colors.white,
+                        ),
                       ),
                       SizedBox(
                         width: 240,

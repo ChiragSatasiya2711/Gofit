@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/take_rest_screen.dart';
 
 class SidePlank extends StatefulWidget {
   const SidePlank({Key? key}) : super(key: key);
@@ -9,8 +10,13 @@ class SidePlank extends StatefulWidget {
 }
 
 class _SidePlankState extends State<SidePlank> {
-  CountDownController _controller = CountDownController();
-  bool _ispushed = false;
+  CountDownController controller = CountDownController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,14 +61,18 @@ class _SidePlankState extends State<SidePlank> {
               height: 100,
               duration: 30,
               fillColor: Colors.blue,
-              controller: _controller,
+              controller: controller,
               backgroundColor: Colors.white54,
               strokeWidth: 10.0,
               strokeCap: StrokeCap.round,
               isTimerTextShown: true,
               isReverse: false,
-              autoStart: false,
-              onComplete: () {},
+              autoStart: true,
+              onComplete: () {
+                controller.restart(duration: 30);
+                controller.pause();
+                setState(() {});
+              },
               textStyle: const TextStyle(fontSize: 50.0, color: Colors.black),
               ringColor: const Color(0xFF9E9E9E),
             ),
@@ -76,17 +86,14 @@ class _SidePlankState extends State<SidePlank> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  if (_ispushed) {
-                    _ispushed = false;
-                    _controller.resume();
-                  } else {
-                    _ispushed = true;
-                    _controller.pause();
-                  }
-                });
+                if (controller.isPaused) {
+                  controller.resume();
+                } else if (controller.isStarted) {
+                  controller.pause();
+                }
+                setState(() {});
               },
-              child: Text(_ispushed ? 'Resume' : 'Pause'),
+              child: Text(controller.isPaused ? 'Resume' : 'Pause'),
             ),
             SizedBox(height: height * 0.04),
             Row(
@@ -132,9 +139,18 @@ class _SidePlankState extends State<SidePlank> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
-                          "Skip",
-                          style: TextStyle(color: Color(0xFF6842FF), fontWeight: FontWeight.bold, fontSize: 15),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TakeRestScreen(),
+                                ));
+                          },
+                          child: const Text(
+                            "Skip",
+                            style: TextStyle(color: Color(0xFF6842FF), fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
                         ),
                         SizedBox(width: width * 0.02),
                         const Icon(Icons.arrow_forward),
