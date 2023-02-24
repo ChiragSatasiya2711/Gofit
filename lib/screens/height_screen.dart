@@ -9,6 +9,8 @@ class HeightScreen extends StatefulWidget {
 }
 
 class _HeightScreenState extends State<HeightScreen> {
+  final FixedExtentScrollController _controller = FixedExtentScrollController(initialItem: 15);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -36,7 +38,61 @@ class _HeightScreenState extends State<HeightScreen> {
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),
               SizedBox(
-                height: height / 1.5,
+                height: 50,
+              ),
+              Stack(
+                children: [
+                  Container(
+                    height: height / 2,
+                    child: ListWheelScrollView.useDelegate(
+                      physics: const BouncingScrollPhysics(),
+                      itemExtent: 80,
+                      controller: _controller,
+                      childDelegate: ListWheelChildBuilderDelegate(
+                        childCount: 200,
+                        builder: (context, index) {
+                          return Text(
+                            index.toString(),
+                            style: TextStyle(fontSize: text * 40),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 150, left: width / 2.6),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 5,
+                          width: 90,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 70,
+                        ),
+                        Container(
+                          height: 5,
+                          width: 90,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: height / 10,
               ),
               BackContinueComman(
                 title: "Back",

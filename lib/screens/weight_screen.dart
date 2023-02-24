@@ -35,9 +35,6 @@ class _WeightScreenState extends State<WeightScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),
-              SizedBox(
-                height: height / 1.5,
-              ),
               BackContinueComman(
                 title: "Back",
                 data: "Continue",

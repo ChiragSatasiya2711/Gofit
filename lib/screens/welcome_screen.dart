@@ -66,7 +66,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 12),
                     ),
                     SizedBox(
-                      height: height / 65,
+                      height: height / 45,
                     ),
                     Text(
                       "The best fitness app in this century to",

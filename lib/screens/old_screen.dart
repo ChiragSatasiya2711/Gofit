@@ -37,24 +37,62 @@ class _OldScreenState extends State<OldScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
-              SizedBox(height: height * 0.06),
-              Container(
-                height: height / 2,
-                child: ListWheelScrollView.useDelegate(
-                  physics: BouncingScrollPhysics(),
-                  itemExtent: 30,
-                  controller: _controller,
-                  childDelegate: ListWheelChildBuilderDelegate(
-                      childCount: 50,
-                      builder: (context, index) {
-                        return Text(
-                          index.toString(),
-                          style: TextStyle(fontSize: text * 40),
-                        );
-                      }),
-                ),
+              SizedBox(height: height / 30),
+              Stack(
+                children: [
+                  Container(
+                    height: height / 2,
+                    child: ListWheelScrollView.useDelegate(
+                      physics: const BouncingScrollPhysics(),
+                      itemExtent: 80,
+                      controller: _controller,
+                      childDelegate: ListWheelChildBuilderDelegate(
+                        childCount: 50,
+                        builder: (context, index) {
+                          return Text(
+                            index.toString(),
+                            style: TextStyle(fontSize: text * 40),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 150, left: width / 2.5),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 5,
+                          width: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 80,
+                        ),
+                        Container(
+                          height: 5,
+                          width: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              BackContinueComman(
+              const SizedBox(
+                height: 100,
+              ),
+              const BackContinueComman(
                 title: "Back",
                 data: "Continue",
               ),
