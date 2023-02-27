@@ -9,6 +9,8 @@ class WeightScreen extends StatefulWidget {
 }
 
 class _WeightScreenState extends State<WeightScreen> {
+  final FixedExtentScrollController _controller = FixedExtentScrollController(initialItem: 15);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
