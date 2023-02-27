@@ -31,7 +31,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
       appBar: AppBar(
         backgroundColor: Colors.white24,
         elevation: 0,
-        title: Text(
+        title: const Text(
           "Profile",
           style: TextStyle(color: Colors.black),
         ),
@@ -51,7 +51,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Stack(
                 alignment: Alignment.bottomRight,
                 children: [
@@ -80,7 +80,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: Text(
                   "Christina Ainsley",
@@ -91,19 +91,19 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                 "christina_ainsley@yourdomain.com",
                 style: TextStyle(fontSize: text * 12, fontWeight: FontWeight.bold, color: Colors.black),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PremiumScreen(),
+                        builder: (context) => const PremiumScreen(),
                       ));
                 },
                 child: Container(
                   height: height * 0.12,
                   width: double.infinity,
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
                     color: Colors.blue,
@@ -119,13 +119,13 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                             "Upgrade to Premium",
                             style: TextStyle(fontSize: text * 15, fontWeight: FontWeight.bold, color: Colors.white),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.arrow_circle_right,
                             color: Colors.white,
                           ),
                         ],
                       ),
-                      SizedBox(height: 14),
+                      const SizedBox(height: 14),
                       Text(
                         "Enjoy workout access without ads and restrictions",
                         style: TextStyle(fontSize: text * 10, fontWeight: FontWeight.bold, color: Colors.white),
@@ -138,7 +138,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
               Row(
                 children: [
                   Icon(Icons.person, color: Colors.grey, size: text * 25),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   Text(
                     "Edit Profile",
                     style: TextStyle(color: Colors.black, fontSize: text * 15, fontWeight: FontWeight.bold),
@@ -146,17 +146,17 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 17),
+                padding: const EdgeInsets.symmetric(vertical: 17),
                 child: Row(
                   children: [
                     Icon(Icons.notifications, color: Colors.grey, size: text * 25),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => NotificationScreen(),
+                              builder: (context) => const NotificationScreen(),
                             ));
                       },
                       child: Text(
@@ -172,13 +172,13 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SecurityScreen(),
+                        builder: (context) => const SecurityScreen(),
                       ));
                 },
                 child: Row(
                   children: [
                     Icon(Icons.security, color: Colors.grey, size: text * 25),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     Text(
                       "Security",
                       style: TextStyle(color: Colors.black, fontSize: text * 15, fontWeight: FontWeight.bold),
@@ -187,11 +187,11 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 17),
+                padding: const EdgeInsets.symmetric(vertical: 17),
                 child: Row(
                   children: [
                     Icon(Icons.help_outline, color: Colors.grey, size: text * 25),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     Text(
                       "Help",
                       style: TextStyle(color: Colors.black, fontSize: text * 15, fontWeight: FontWeight.bold),
@@ -202,7 +202,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
               Row(
                 children: [
                   Icon(Icons.remove_red_eye, color: Colors.grey, size: text * 25),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   Text(
                     "Dark Theme",
                     style: TextStyle(color: Colors.black, fontSize: text * 15, fontWeight: FontWeight.bold),
@@ -219,11 +219,11 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 17),
+                padding: const EdgeInsets.symmetric(vertical: 17),
                 child: Row(
                   children: [
                     Icon(Icons.login, color: Colors.red, size: text * 25),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     Text(
                       "Logout",
                       style: TextStyle(color: Colors.red, fontSize: text * 15, fontWeight: FontWeight.bold),
@@ -240,7 +240,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
         elevation: 0,
         child: Container(
           color: Colors.transparent,
-          margin: EdgeInsets.symmetric(vertical: 10),
+          margin: const EdgeInsets.symmetric(vertical: 10),
           height: height * 0.06,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -253,19 +253,19 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                     color: Colors.black38,
                     size: text * 22,
                   ),
-                  Text("Home")
+                  const Text("Home")
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Image.asset("assets/images/discover.png"), Text("Discover")],
+                children: [Image.asset("assets/images/discover.png"), const Text("Discover")],
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => InsightScreen(),
+                        builder: (context) => const InsightScreen(),
                       ),
                       (route) => false);
                 },
@@ -273,7 +273,7 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset("assets/images/insight5.png"),
-                    Text(
+                    const Text(
                       "Insight",
                     )
                   ],
@@ -284,9 +284,9 @@ class _ProfileScreenTwoState extends State<ProfileScreenTwo> {
                 children: [
                   Image.asset(
                     "assets/images/profile.png",
-                    color: Color(0xFF6842FF),
+                    color: const Color(0xFF6842FF),
                   ),
-                  Text(
+                  const Text(
                     "Profile",
                     style: TextStyle(color: Color(0xFF6842FF)),
                   )
