@@ -71,6 +71,14 @@ class _GetReadyScreenState extends State<GetReadyScreen> {
           },
           child: CommanContainer(
             title: "Start",
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SidePlank(),
+                ),
+              );
+            },
           ),
         ),
       ),

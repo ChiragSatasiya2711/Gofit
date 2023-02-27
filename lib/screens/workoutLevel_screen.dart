@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/comman_screen/comman_compponents_screen.dart';
 
 class WorkoutLevelScreen extends StatefulWidget {
   const WorkoutLevelScreen({Key? key}) : super(key: key);
@@ -10,18 +11,8 @@ class WorkoutLevelScreen extends StatefulWidget {
 class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
   String sel = "Beginer";
 
-  List image = [
-    'assets/images/unsplash_WvDYdXDzkhs.png',
-    'assets/images/image 9.png',
-    'assets/images/image 10.png',
-    'assets/images/image 11.png'
-  ];
-  List title = [
-    'Squat Movement Exercise',
-    'Full Body Stretching',
-    'Yoga Women Exercise',
-    'Yoga Movement Exercise'
-  ];
+  List image = ['assets/images/unsplash_WvDYdXDzkhs.png', 'assets/images/image 9.png', 'assets/images/image 10.png', 'assets/images/image 11.png'];
+  List title = ['Squat Movement Exercise', 'Full Body Stretching', 'Yoga Women Exercise', 'Yoga Movement Exercise'];
   List text = ['12 minutes', '6 minutes', '8 minutes', '10 minutes'];
   @override
   Widget build(BuildContext context) {
@@ -65,15 +56,7 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
                               },
                               child: Container(
                                   padding: EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
-                                      color: sel == e
-                                          ? Colors.deepPurple
-                                          : Colors.white,
-                                      border: Border.all(
-                                          color: sel == e
-                                              ? Colors.transparent
-                                              : Colors.deepPurple)),
+                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: sel == e ? Colors.deepPurple : Colors.white, border: Border.all(color: sel == e ? Colors.transparent : Colors.deepPurple)),
                                   child: InkWell(
                                     onTap: () {
                                       sel = e;
@@ -82,10 +65,7 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
                                     child: Text(
                                       e,
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          color: sel == e
-                                              ? Colors.white
-                                              : Colors.purple),
+                                      style: TextStyle(color: sel == e ? Colors.white : Colors.purple),
                                     ),
                                   )),
                             ),
@@ -103,11 +83,7 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
                         padding: const EdgeInsets.all(4.0),
                         child: Container(
                           height: 115,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              image: DecorationImage(
-                                  image: AssetImage(image[index]),
-                                  fit: BoxFit.fill)),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), image: DecorationImage(image: AssetImage(image[index]), fit: BoxFit.fill)),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
@@ -116,25 +92,18 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
                               children: [
                                 Text(
                                   title[index],
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  padding: const EdgeInsets.symmetric(vertical: 8.0),
                                   child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Row(
                                         children: [
                                           Text(
                                             text[index],
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20),
+                                            style: TextStyle(color: Colors.white, fontSize: 20),
                                           ),
                                           SizedBox(
                                             width: 10,
@@ -149,9 +118,7 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
                                           ),
                                           Text(
                                             "Intermediate",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16),
+                                            style: TextStyle(color: Colors.white, fontSize: 16),
                                           ),
                                         ],
                                       ),
@@ -173,6 +140,7 @@ class _WorkoutLevelScreenState extends State<WorkoutLevelScreen> {
               ],
             ),
           ),
+          CommanContainer(),
         ],
       ),
     );

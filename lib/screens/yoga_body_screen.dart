@@ -101,7 +101,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                             date[index],
                             style: GoogleFonts.rubik(color: const Color(0xFF6842FF)),
                           ),
-                          padding:  EdgeInsets.symmetric(vertical: 10),
+                          padding: EdgeInsets.symmetric(vertical: 10),
                           backgroundColor: Colors.white,
                         ),
                       ),
@@ -191,6 +191,14 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
             },
             child: CommanContainer(
               title: "Start",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WorkoutActivity(),
+                  ),
+                );
+              },
             ),
           ),
         ),

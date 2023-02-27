@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/premium_screen.dart';
 import 'package:gofit/screens/profile_screen_main.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
@@ -219,7 +220,19 @@ class _InsightScreenState extends State<InsightScreen> {
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [Image.asset("assets/images/profile.png"), Text("Profile")],
+                          children: [
+                            Image.asset("assets/images/profile.png"),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PremiumScreen(),
+                                    ));
+                              },
+                              child: const Text("Profile"),
+                            ),
+                          ],
                         ),
                       ),
                     ],

@@ -101,6 +101,14 @@ class _WorkoutActivityState extends State<WorkoutActivity> {
           },
           child: CommanContainer(
             title: "Start",
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => GetReadyScreen(),
+                ),
+              );
+            },
           ),
         ),
       ),

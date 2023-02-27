@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/comman_compponents_screen.dart';
+import 'package:gofit/screens/insight_Screen.dart';
 
 class CongratulationScreen extends StatefulWidget {
   const CongratulationScreen({Key? key}) : super(key: key);
@@ -87,7 +88,16 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
                 ),
               ),
               SizedBox(height: height * 0.08),
-              CommanContainer(title: "Next to Another Workout"),
+              CommanContainer(
+                title: "Next to Another Workout",
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => InsightScreen(),
+                      ));
+                },
+              ),
               Container(
                 height: 55,
                 width: double.infinity,

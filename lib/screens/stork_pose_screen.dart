@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/congratulations_screen.dart';
 
 class StorkPoseScreen extends StatefulWidget {
   const StorkPoseScreen({Key? key}) : super(key: key);
@@ -132,9 +133,19 @@ class _StorkPoseScreenState extends State<StorkPoseScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
-                          "Skip",
-                          style: TextStyle(color: Color(0xFF6842FF), fontWeight: FontWeight.bold, fontSize: 15),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CongratulationScreen(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            "Skip",
+                            style: TextStyle(color: Color(0xFF6842FF), fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
                         ),
                         SizedBox(width: width * 0.02),
                         const Icon(Icons.arrow_forward),

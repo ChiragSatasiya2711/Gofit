@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
-import 'package:gofit/screens/weight_screen.dart';
+import 'package:gofit/screens/height_screen.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -101,7 +101,7 @@ class _OldScreenState extends State<OldScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => WeightScreen(),
+                      builder: (context) => HeightScreen(),
                     ),
                   );
                 },

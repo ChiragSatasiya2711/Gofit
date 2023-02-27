@@ -1,6 +1,7 @@
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
+import 'package:gofit/screens/profile_screen.dart';
 
 class PhysicalActivityLevelScreen extends StatefulWidget {
   const PhysicalActivityLevelScreen({Key? key}) : super(key: key);
@@ -68,9 +69,17 @@ class _PhysicalActivityLevelScreenState extends State<PhysicalActivityLevelScree
               SizedBox(
                 height: height * 0.16,
               ),
-              const BackContinueComman(
+              BackContinueComman(
                 title: "Back",
                 data: "Continue",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

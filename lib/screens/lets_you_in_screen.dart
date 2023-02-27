@@ -135,7 +135,7 @@ class _LetsYouInScreenState extends State<LetsYouInScreen> {
                   child: const Center(
                     child: Text(
                       "Sign in with password",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),

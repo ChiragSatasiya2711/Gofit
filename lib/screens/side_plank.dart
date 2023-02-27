@@ -1,6 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/take_rest_screen.dart';
+import 'package:gofit/screens/stork_pose_screen.dart';
 
 class SidePlank extends StatefulWidget {
   const SidePlank({Key? key}) : super(key: key);
@@ -144,7 +144,7 @@ class _SidePlankState extends State<SidePlank> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TakeRestScreen(),
+                                  builder: (context) => StorkPoseScreen(),
                                 ));
                           },
                           child: const Text(
