@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
+import 'package:gofit/screens/weight_screen.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -37,26 +38,73 @@ class _OldScreenState extends State<OldScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w400),
               ),
-              SizedBox(height: height * 0.06),
-              Container(
-                height: height / 2,
-                child: ListWheelScrollView.useDelegate(
-                  physics: BouncingScrollPhysics(),
-                  itemExtent: 30,
-                  controller: _controller,
-                  childDelegate: ListWheelChildBuilderDelegate(
-                      childCount: 50,
-                      builder: (context, index) {
-                        return Text(
-                          index.toString(),
-                          style: TextStyle(fontSize: text * 40),
-                        );
-                      }),
-                ),
+              SizedBox(height: height / 30),
+              Stack(
+                children: [
+                  Container(
+                    height: height / 2,
+                    child: ListWheelScrollView.useDelegate(
+                      physics: const FixedExtentScrollPhysics(),
+                      itemExtent: 80,
+                      controller: _controller,
+                      useMagnifier: true,
+                      childDelegate: ListWheelChildBuilderDelegate(
+                        childCount: 50,
+                        builder: (context, index) {
+                          return Text(
+                            index.toString(),
+                            style: TextStyle(fontSize: text * 40),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 150, left: width / 2.5),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 5,
+                          width: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 80,
+                        ),
+                        Container(
+                          height: 5,
+                          width: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0x6842FFFF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 100,
               ),
               BackContinueComman(
                 title: "Back",
                 data: "Continue",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WeightScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
