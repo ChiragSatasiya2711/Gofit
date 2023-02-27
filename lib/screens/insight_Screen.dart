@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofit/screens/profile_screen_main.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class InsightScreen extends StatefulWidget {
@@ -208,9 +209,18 @@ class _InsightScreenState extends State<InsightScreen> {
                           )
                         ],
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [Image.asset("assets/images/profile.png"), Text("Profile")],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfileScreenTwo(),
+                              ));
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [Image.asset("assets/images/profile.png"), Text("Profile")],
+                        ),
                       ),
                     ],
                   ),
