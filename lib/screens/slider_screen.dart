@@ -20,7 +20,7 @@ class _SliderScreenState extends State<SliderScreen> {
     double width = size.width;
     double text = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: ListView(
           children: [
             CarouselSlider(
