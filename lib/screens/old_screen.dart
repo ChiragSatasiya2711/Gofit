@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
+import 'package:gofit/screens/weight_screen.dart';
 
 class OldScreen extends StatefulWidget {
   const OldScreen({Key? key}) : super(key: key);
@@ -43,9 +44,10 @@ class _OldScreenState extends State<OldScreen> {
                   Container(
                     height: height / 2,
                     child: ListWheelScrollView.useDelegate(
-                      physics: const BouncingScrollPhysics(),
+                      physics: const FixedExtentScrollPhysics(),
                       itemExtent: 80,
                       controller: _controller,
+                      useMagnifier: true,
                       childDelegate: ListWheelChildBuilderDelegate(
                         childCount: 50,
                         builder: (context, index) {
@@ -92,9 +94,17 @@ class _OldScreenState extends State<OldScreen> {
               const SizedBox(
                 height: 100,
               ),
-              const BackContinueComman(
+              BackContinueComman(
                 title: "Back",
                 data: "Continue",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WeightScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

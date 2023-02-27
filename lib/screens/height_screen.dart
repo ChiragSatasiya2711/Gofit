@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/comman_screen/back_continue_comman.dart';
+import 'package:gofit/screens/goal_screen.dart';
 
 class HeightScreen extends StatefulWidget {
   const HeightScreen({Key? key}) : super(key: key);
@@ -45,7 +46,9 @@ class _HeightScreenState extends State<HeightScreen> {
                   Container(
                     height: height / 2,
                     child: ListWheelScrollView.useDelegate(
-                      physics: const BouncingScrollPhysics(),
+                      physics: FixedExtentScrollPhysics(),
+                      useMagnifier: true,
+                      magnification: 1,
                       itemExtent: 80,
                       controller: _controller,
                       childDelegate: ListWheelChildBuilderDelegate(
@@ -67,7 +70,7 @@ class _HeightScreenState extends State<HeightScreen> {
                           height: 5,
                           width: 90,
                           decoration: const BoxDecoration(
-                            color: Color(0x6842FFFF),
+                            color: Color(0xFF6842FF),
                             borderRadius: BorderRadius.all(
                               Radius.circular(30),
                             ),
@@ -80,7 +83,7 @@ class _HeightScreenState extends State<HeightScreen> {
                           height: 5,
                           width: 90,
                           decoration: const BoxDecoration(
-                            color: Color(0x6842FFFF),
+                            color: Color(0xFF6842FF),
                             borderRadius: BorderRadius.all(
                               Radius.circular(30),
                             ),
@@ -97,6 +100,13 @@ class _HeightScreenState extends State<HeightScreen> {
               BackContinueComman(
                 title: "Back",
                 data: "Continue",
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GoalScreen(),
+                      ));
+                },
               ),
             ],
           ),

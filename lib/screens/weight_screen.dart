@@ -35,7 +35,7 @@ class _WeightScreenState extends State<WeightScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: height / 48, fontWeight: FontWeight.w400),
               ),
-              BackContinueComman(
+              const BackContinueComman(
                 title: "Back",
                 data: "Continue",
               ),
