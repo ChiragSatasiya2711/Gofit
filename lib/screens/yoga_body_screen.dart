@@ -101,7 +101,7 @@ class _YogaBodyScreenState extends State<YogaBodyScreen> {
                             date[index],
                             style: GoogleFonts.rubik(color: const Color(0xFF6842FF)),
                           ),
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          padding:  EdgeInsets.symmetric(vertical: 10),
                           backgroundColor: Colors.white,
                         ),
                       ),
