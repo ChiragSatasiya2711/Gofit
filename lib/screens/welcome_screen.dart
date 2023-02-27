@@ -35,45 +35,56 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     double text = MediaQuery.of(context).textScaleFactor;
 
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          Stack(
             children: [
-              Stack(
-                children: [
-                  Image.asset("assets/images/new_image_2.png", fit: BoxFit.cover),
-                  Padding(
-                    padding: EdgeInsets.only(left: width * 0.08, top: height / 1.4),
-                    child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Welcome to",
-                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 15),
-                        ),
-                        SizedBox(
-                          height: height / 200,
-                        ),
-                        Text(
-                          "Gofit",
-                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 8.9),
-                        ),
-                        SizedBox(
-                          height: height / 30,
-                        ),
-                        Text(
-                          "The best fitness app in this century to \naccompany your sports.",
-                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 42),
-                        ),
-                      ],
+              Center(
+                child: Image.asset(
+                  "assets/images/new_image_2.png",
+                  fit: BoxFit.cover,
+                  height: 802,
+                  width: 510,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: width / 12,
+                  top: height / 1.46,
+                ),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome to",
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 22),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: height / 80,
+                    ),
+                    Text(
+                      "Gofit",
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 12),
+                    ),
+                    SizedBox(
+                      height: height / 45,
+                    ),
+                    Text(
+                      "The best fitness app in this century to",
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 55),
+                    ),
+                    Text(
+                      "accompany your sports.",
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: height / 55),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }
