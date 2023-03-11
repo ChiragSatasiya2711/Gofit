@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gofit/screens/yoga_body_screen.dart';
+
+
+import 'screens/slider_screen.dart';
+import 'screens/splash_screen.dart';
+import 'screens/workout_activity_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: YogaBodyScreen(),
+      home: SplashScreen(),
     );
   }
 }

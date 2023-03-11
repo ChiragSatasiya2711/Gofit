@@ -25,7 +25,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
         bottom: true,
         child: Stack(children: [
           Image.asset(
-            'assets/images/pri_screen.png',
+            'assets/images/new_image_3.png',
             height: double.infinity,
             fit: BoxFit.fitHeight,
           ),

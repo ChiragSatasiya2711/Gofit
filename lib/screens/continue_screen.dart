@@ -30,7 +30,10 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   Text(
                     "Tell Us About Yourself",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: height / 30),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: height / 30),
                   ),
                   SizedBox(
                     height: height / 40,
@@ -38,12 +41,14 @@ class _ContinueScreenState extends State<ContinueScreen> {
                   Text(
                     "To give you a better experience and results \nwe need to know your gender.",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: height / 50, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontSize: height / 50, fontWeight: FontWeight.w500),
                   ),
                   GestureDetector(
                     onTap: () => setState(() => _value = 0),
                     child: Container(
-                      margin: EdgeInsets.only(top: height * 0.12, bottom: height * 0.02),
+                      margin: EdgeInsets.only(
+                          top: height * 0.12, bottom: height * 0.02),
                       height: height * 0.19,
                       width: width * 0.42,
                       decoration: BoxDecoration(
@@ -57,7 +62,11 @@ class _ContinueScreenState extends State<ContinueScreen> {
                           SizedBox(height: height * 0.01),
                           Text(
                             "Male",
-                            style: TextStyle(color: Colors.white, fontSize: text * 18, height: 2, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: text * 18,
+                                height: 2,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -77,7 +86,12 @@ class _ContinueScreenState extends State<ContinueScreen> {
                         children: [
                           Image.asset("assets/images/new_image_7.png"),
                           SizedBox(height: height * 0.01),
-                          Text("Female", style: TextStyle(height: 1, fontSize: text * 18, color: Colors.white, fontWeight: FontWeight.bold)),
+                          Text("Female",
+                              style: TextStyle(
+                                  height: 1,
+                                  fontSize: text * 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
